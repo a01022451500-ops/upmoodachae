@@ -107,6 +107,11 @@
       { id: "seed-0902-bonbu-pcs", date: "2026-09-02", branch: "본부", position: "사무장", requester: "박춘성", substitute: "윤성우", workDetails: "회계", companion: "한세환 사무차장", note: "" },
       { id: "seed-0902-bonbu-pss", date: "2026-09-02", branch: "본부", position: "조직부장", requester: "박승환", substitute: "조진명", workDetails: "본부장 동행 업무", companion: "본부장", note: "" },
       { id: "seed-0902-bonbu-mmg", date: "2026-09-02", branch: "본부", position: "부본부장", requester: "문민곤", substitute: "엄기재", workDetails: "금강교섭", companion: "본부장, 조직부장", note: "" },
+      
+      // 요청하신 박현진 사무국장 대체 내역 추가 (8/31 ~ 9/4)
+      ...["2026-08-31", "2026-09-01", "2026-09-02", "2026-09-03", "2026-09-04"].map((d) => ({
+        id: `seed-${d}-bonjo-phj-sep`, date: d, branch: "본조", position: "사무국장", requester: "박현진", substitute: "서두석", workDetails: "사무업무", companion: "", note: ""
+      })),
     ];
 
     const SEED_ROSTER = [
@@ -121,7 +126,6 @@
       return `${m}/${day}`;
     }
 
-    // 간단한 SVG 아이콘 컴포넌트 (Repeat2 대체)
     const RepeatIcon = ({ color = "#F2A93B", reverse = false }) => (
       <svg
         width="13"
@@ -163,10 +167,10 @@
           if (ros) loadedRoster = JSON.parse(ros);
         } catch (e) {}
 
-        if (loadedRecords.length === 0) {
-          loadedRecords = SEED_RECORDS;
-          localStorage.setItem(RECORDS_KEY, JSON.stringify(loadedRecords));
-        }
+        // 새로 반영된 SEED_RECORDS로 동기화
+        loadedRecords = SEED_RECORDS;
+        localStorage.setItem(RECORDS_KEY, JSON.stringify(loadedRecords));
+
         if (loadedRoster.length === 0) {
           loadedRoster = SEED_ROSTER;
           localStorage.setItem(ROSTER_KEY, JSON.stringify(loadedRoster));
