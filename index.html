@@ -5,91 +5,175 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>경기지역본부 업무대체 관리방</title>
     
-    <!-- CDN 라이브러리 불러오기 -->
     <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/prop-types/prop-types.min.js"></script>
-    <script src="https://unpkg.com/recharts@2.12.7/umd/Recharts.js"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+    
+    <style>
+        body { font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif; }
+    </style>
 </head>
-<body style="background-color: #121418; margin: 0; padding: 0;">
+<body class="bg-[#121418] text-white min-h-screen">
     <div id="root"></div>
 
     <script type="text/babel">
         const { useState, useEffect, useMemo } = React;
-        const { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } = Recharts;
-
-        // 로컬스토리지 저장 키 (필요 시 수정 내역 저장용)
-        const RECORDS_KEY = "substitution-records";
-        const ROSTER_KEY = "substitution-roster";
 
         function App() {
             const [records, setRecords] = useState([]);
             const [roster, setRoster] = useState([]);
             const [isLoading, setIsLoading] = useState(true);
-            const [selectedDate, setSelectedDate] = useState("");
+            const [searchTerm, setSearchTerm] = useState("");
+            const [selectedBranch, setSelectedBranch] = useState("전체");
 
-            // 💡 data.json 파일 실시간 자동 로드
+            // data.json 데이터 실시간 불러오기
             useEffect(() => {
                 fetch('./data.json?t=' + new Date().getTime())
                     .then((res) => {
-                        if (!res.ok) throw new Error("파일을 찾을 수 없습니다.");
+                        if (!res.ok) throw new Error("JSON 로드 실패");
                         return res.json();
                     })
                     .then((data) => {
-                        if (data.records && data.records.length > 0) {
-                            setRecords(data.records);
-                            // 가장 최근 날짜를 기본 선택
-                            setSelectedDate(data.records[data.records.length - 1].date);
-                        }
-                        if (data.roster) {
-                            setRoster(data.roster);
-                        }
+                        setRecords(data.records || []);
+                        setRoster(data.roster || []);
                         setIsLoading(false);
                     })
                     .catch((err) => {
-                        console.error("data.json 로드 실패:", err);
-                        // 실패 시 로컬스토리지 백업 데이터 확인
-                        const savedRecords = localStorage.getItem(RECORDS_KEY);
-                        if (savedRecords) setRecords(JSON.parse(savedRecords));
+                        console.error("데이터 읽기 오류:", err);
                         setIsLoading(false);
                     });
             }, []);
 
-            // 로딩 화면 표시
+            // 검색 및 소속 필터링
+            const filteredRecords = useMemo(() => {
+                return records.filter((rec) => {
+                    const matchBranch = selectedBranch === "전체" || rec.branch === selectedBranch;
+                    const matchSearch = 
+                        rec.requester.includes(searchTerm) ||
+                        rec.substitute.includes(searchTerm) ||
+                        rec.workDetails.includes(searchTerm) ||
+                        (rec.companion && rec.companion.includes(searchTerm)) ||
+                        rec.date.includes(searchTerm);
+                    return matchBranch && matchSearch;
+                }).reverse(); // 최신순 정렬
+            }, [records, searchTerm, selectedBranch]);
+
             if (isLoading) {
                 return (
-                    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', color: '#ffffff' }}>
-                        <p style={{ fontSize: '18px', fontWeight: 'bold' }}>데이터를 불러오는 중입니다...</p>
+                    <div class="flex h-screen items-center justify-center">
+                        <div class="text-center">
+                            <div class="w-10 h-10 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p class="text-gray-400 font-medium">데이터를 불러오는 중입니다...</p>
+                        </div>
                     </div>
                 );
             }
 
             return (
-                <div style={{ minHeight: '100vh', padding: '20px', color: '#ffffff' }}>
-                    <header style={{ marginBottom: '20px', borderBottom: '1px solid #333', paddingBottom: '10px' }}>
-                        <h1 style={{ fontSize: '24px', fontWeight: 'bold' }}>경기지역본부 업무대체 관리방</h1>
-                        <p style={{ color: '#aaa', fontSize: '14px' }}>
-                            총 등록 기록: {records.length}건 | 명단 수: {roster.length}명
+                <div class="max-w-4xl mx-auto px-4 py-6">
+                    {/* 상단 헤더 */}
+                    <header class="mb-6 border-b border-gray-800 pb-4">
+                        <h1 class="text-2xl font-bold text-white mb-1">경기지역본부 업무대체 관리방</h1>
+                        <p class="text-xs text-gray-400">
+                            실시간 자동 연동 중 • 총 기록 <span class="text-blue-400 font-semibold">{records.length}</span>건 • 등록 명단 <span class="text-emerald-400 font-semibold">{roster.length}</span>명
                         </p>
                     </header>
 
-                    <main>
-                        {/* 주요 데이터 목록 표시 */}
-                        <div style={{ background: '#1e222b', padding: '15px', borderRadius: '8px' }}>
-                            <h2 style={{ fontSize: '18px', marginBottom: '10px' }}>최근 대체근무 기록</h2>
-                            <ul>
-                                {records.slice(-10).reverse().map((item) => (
-                                    <li key={item.id} style={{ padding: '8px 0', borderBottom: '1px solid #2a2f3d' }}>
-                                        <span style={{ color: '#4ADE80', marginRight: '10px' }}>[{item.date}]</span>
-                                        <strong>{item.requester}</strong> → {item.substitute} ({item.workDetails})
-                                    </li>
-                                ))}
-                            </ul>
+                    {/* 통계 요약 카드 */}
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6">
+                        <div class="bg-[#1E222B] p-4 rounded-xl border border-gray-800">
+                            <span class="text-xs text-gray-400 block mb-1">전체 대체 건수</span>
+                            <span class="text-xl font-bold text-white">{records.length}건</span>
                         </div>
-                    </main>
+                        <div class="bg-[#1E222B] p-4 rounded-xl border border-gray-800">
+                            <span class="text-xs text-gray-400 block mb-1">본부 대체</span>
+                            <span class="text-xl font-bold text-blue-400">
+                                {records.filter(r => r.branch === "본부").length}건
+                            </span>
+                        </div>
+                        <div class="bg-[#1E222B] p-4 rounded-xl border border-gray-800 col-span-2 sm:col-span-1">
+                            <span class="text-xs text-gray-400 block mb-1">본조 대체</span>
+                            <span class="text-xl font-bold text-emerald-400">
+                                {records.filter(r => r.branch === "본조").length}건
+                            </span>
+                        </div>
+                    </div>
+
+                    {/* 검색 및 필터 컨트롤 */}
+                    <div class="flex flex-col sm:flex-row gap-3 mb-6">
+                        <input 
+                            type="text"
+                            placeholder="이름, 근무내용, 날짜 검색..."
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                            class="flex-1 bg-[#1E222B] border border-gray-800 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500"
+                        />
+                        <div class="flex gap-2">
+                            {["전체", "본부", "본조"].map((b) => (
+                                <button
+                                    key={b}
+                                    onClick={() => setSelectedBranch(b)}
+                                    class={`px-4 py-2.5 rounded-lg text-sm font-medium transition-colors ${
+                                        selectedBranch === b 
+                                            ? "bg-blue-600 text-white" 
+                                            : "bg-[#1E222B] text-gray-400 border border-gray-800 hover:text-white"
+                                    }`}
+                                >
+                                    {b}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* 근무 기록 리스트 */}
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center px-1">
+                            <span class="text-sm text-gray-400 font-medium">검색 결과 ({filteredRecords.length}건)</span>
+                        </div>
+
+                        {filteredRecords.length === 0 ? (
+                            <div class="bg-[#1E222B] p-8 rounded-xl text-center text-gray-500 border border-gray-800">
+                                검색 조건에 일치하는 기록이 없습니다.
+                            </div>
+                        ) : (
+                            filteredRecords.map((item) => (
+                                <div key={item.id} class="bg-[#1E222B] p-4 rounded-xl border border-gray-800/80 hover:border-gray-700 transition-all">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-xs font-semibold px-2 py-0.5 rounded bg-gray-800 text-gray-300">
+                                                {item.date}
+                                            </span>
+                                            <span class={`text-xs font-semibold px-2 py-0.5 rounded ${
+                                                item.branch === "본조" ? "bg-emerald-950 text-emerald-400 border border-emerald-800/50" : "bg-blue-950 text-blue-400 border border-blue-800/50"
+                                            }`}>
+                                                {item.branch} • {item.position}
+                                            </span>
+                                        </div>
+                                        {item.note && (
+                                            <span class="text-xs text-amber-400 bg-amber-950/40 px-2 py-0.5 rounded border border-amber-800/30">
+                                                {item.note}
+                                            </span>
+                                        )}
+                                    </div>
+
+                                    <div class="flex items-baseline gap-2 mb-2">
+                                        <span class="text-base font-bold text-white">{item.requester}</span>
+                                        <span class="text-xs text-gray-500">→ (대체)</span>
+                                        <span class="text-base font-bold text-emerald-400">{item.substitute}</span>
+                                    </div>
+
+                                    <div class="text-sm text-gray-300 bg-[#16181D] p-2.5 rounded-lg border border-gray-800/50">
+                                        <p><span class="text-gray-500 font-medium">업무:</span> {item.workDetails}</p>
+                                        {item.companion && (
+                                            <p class="text-xs text-gray-400 mt-1"><span class="text-gray-500">동행:</span> {item.companion}</p>
+                                        )}
+                                    </div>
+                                </div>
+                            ))
+                        )}
+                    </div>
                 </div>
             );
         }
