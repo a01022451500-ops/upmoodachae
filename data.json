@@ -90,12 +90,15 @@
     { "id": "seed-2026-09-02-bonjo-phj-sep", "date": "2026-09-02", "branch": "본조", "position": "사무국장", "requester": "박현진", "substitute": "서두석", "workDetails": "사무업무", "companion": "", "note": "" },
     { "id": "seed-2026-09-03-bonjo-phj-sep", "date": "2026-09-03", "branch": "본조", "position": "사무국장", "requester": "박현진", "substitute": "서두석", "workDetails": "사무업무", "companion": "", "note": "" },
     { "id": "seed-2026-09-04-bonjo-phj-sep", "date": "2026-09-04", "branch": "본조", "position": "사무국장", "requester": "박현진", "substitute": "서두석", "workDetails": "사무업무", "companion": "", "note": "" },
-    { "id": "seed-0907-bonbu-pss", "date": "2026-09-07", "branch": "본부", "position": "조직부장", "requester": "박승환", "substitute": "조진명", "workDetails": "박승환 부장님 대체", "companion": "", "note": "" },
+    { "id": "seed-0907-bonbu-pss", "date": "2026-09-07", "branch": "본부", "position": "조직부장", "requester": "박승환", "substitute": "조진명", "workDetails": "제일타워공영 서완철이사 교섭", "companion": "남부지부장, 우경원 조직부장", "note": "" },
+    { "id": "rec-20260907-bonbu-wky", "date": "2026-09-07", "branch": "본부", "position": "조직부장", "requester": "우경원", "substitute": "박정환", "workDetails": "제일타워공영 교섭건", "companion": "박승환부장님, 김우선지부장님", "note": "" },
     { "id": "rec-20260907-nambu-kws", "date": "2026-09-07", "branch": "본부", "position": "남부지부장", "requester": "김우선", "substitute": "김재선", "workDetails": "제일타워공영 서완철이사 교섭", "companion": "박승환조직부장", "note": "" },
     { "id": "rec-20260907-bonjo-phj", "date": "2026-09-07", "branch": "본조", "position": "사무국장", "requester": "박현진", "substitute": "서두석", "workDetails": "본조 사무국업무", "companion": "", "note": "" },
     { "id": "rec-20260908-bonjo-phj", "date": "2026-09-08", "branch": "본조", "position": "사무국장", "requester": "박현진", "substitute": "서두석", "workDetails": "본조 사무국업무", "companion": "", "note": "" },
     { "id": "rec-20260909-bonjo-phj", "date": "2026-09-09", "branch": "본조", "position": "사무국장", "requester": "박현진", "substitute": "서두석", "workDetails": "본조 사무국업무", "companion": "", "note": "" },
     { "id": "rec-20260910-bonjo-phj", "date": "2026-09-10", "branch": "본조", "position": "사무국장", "requester": "박현진", "substitute": "서두석", "workDetails": "본조 사무국업무", "companion": "", "note": "" },
-    { "id": "rec-20260911-bonjo-phj", "date": "2026-09-11", "branch": "본조", "position": "사무국장", "requester": "박현진", "substitute": "서두석", "workDetails": "본조 사무국업무", "companion": "", "note": "" }
+    { "id": "rec-20260911-bonjo-phj", "date": "2026-09-11", "branch": "본조", "position": "사무국장", "requester": "박현진", "substitute": "서두석", "workDetails": "본조 사무국업무", "companion": "", "note": "" },
+    { "id": "rec-20260909-bonjo-pss", "date": "2026-09-09", "branch": "본조", "position": "조직부장", "requester": "박승환", "substitute": "조진명", "workDetails": "본부장님 동행 업무", "companion": "본부장", "note": "" },
+    { "id": "rec-20260910-bonjo-pss", "date": "2026-09-10", "branch": "본조", "position": "조직부장", "requester": "박승환", "substitute": "조진명", "workDetails": "본부장님 동행 업무", "companion": "본부장", "note": "" }
   ]
 }
