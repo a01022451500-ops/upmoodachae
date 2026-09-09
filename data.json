@@ -101,6 +101,7 @@
     { "id": "rec-20260909-bonjo-pss", "date": "2026-09-09", "branch": "본조", "position": "조직부장", "requester": "박승환", "substitute": "조진명", "workDetails": "본부장님 동행 업무", "companion": "본부장", "note": "" },
     { "id": "rec-20260910-bonjo-pss", "date": "2026-09-10", "branch": "본조", "position": "조직부장", "requester": "박승환", "substitute": "조진명", "workDetails": "본부장님 동행 업무", "companion": "본부장", "note": "" },
     { "id": "rec-20260909-bonbu-hdh", "date": "2026-09-09", "branch": "본부", "position": "조직차장", "requester": "홍대훈", "substitute": "임대현", "workDetails": "북서 미전 현장방문 및 본사 미팅", "companion": "북서지부장", "note": "" },
-    { "id": "rec-20260909-nambu-kws", "date": "2026-09-09", "branch": "본부", "position": "남부지부장", "requester": "김우선", "substitute": "김재선", "workDetails": "안성한화데이터센타 저단가입찰 집회", "companion": "김시삼 기사", "note": "" }
+    { "id": "rec-20260909-nambu-kws", "date": "2026-09-09", "branch": "본부", "position": "남부지부장", "requester": "김우선", "substitute": "김재선", "workDetails": "안성한화데이터센타 저단가입찰 집회", "companion": "김시삼 기사", "note": "" },
+    { "id": "rec-20260910-bonbu-jyk", "date": "2026-09-10", "branch": "본부", "position": "조직차장", "requester": "정윤기", "substitute": "도형래", "workDetails": "북서 수영로지콘 방문", "companion": "북서 김정섭 지부장님, 중부지부 엄기우", "note": "" }
   ]
 }
