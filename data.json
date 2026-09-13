@@ -107,6 +107,9 @@
     { "id": "rec-20260911-namseo-hcy", "date": "2026-09-11", "branch": "본부", "position": "지부장", "requester": "황창연", "substitute": "박정환", "workDetails": "병점태왕 현장방문및미팅,서영플러스현장방문및미팅,원동373-1.(소형)현장방문,남양리2226-5.(소형)현장방문및미팅", "companion": "", "note": "" },
     { "id": "rec-20260914-bukbu-cyh", "date": "2026-09-14", "branch": "본부", "position": "지부장", "requester": "최양호", "substitute": "이상건", "workDetails": "금곡동 소형현장(행정복지센타) 소장미팅", "companion": "윤대식", "note": "" },
     { "id": "rec-20260912-bonbu-kth", "date": "2026-09-12", "branch": "본부", "position": "조합원", "requester": "김태호", "substitute": "이상건", "workDetails": "박현순조합원 장례지원", "companion": "김인영조합원", "note": "토요일" },
-    { "id": "rec-20260912-bonbu-kiy", "date": "2026-09-12", "branch": "본부", "position": "조합원", "requester": "김인영", "substitute": "엄동기", "workDetails": "박현순조합원 장례지원", "companion": "김태호조합원", "note": "토요일" }
+    { "id": "rec-20260912-bonbu-kiy", "date": "2026-09-12", "branch": "본부", "position": "조합원", "requester": "김인영", "substitute": "엄동기", "workDetails": "박현순조합원 장례지원", "companion": "김태호조합원", "note": "토요일" },
+    { "id": "rec-20260914-dongbu-jsi", "date": "2026-09-14", "branch": "동부지부", "position": "지부장", "requester": "정승일", "substitute": "백승진", "workDetails": "여주.양평현장 방문및미팅", "companion": "", "note": "" },
+    { "id": "rec-20260914-bonbu-pss", "date": "2026-09-14", "branch": "본부", "position": "조직부장", "requester": "박승환", "substitute": "조진명", "workDetails": "제일타워공영 미팅", "companion": "남부지부장", "note": "" },
+    { "id": "rec-20260914-bonbu-wky", "date": "2026-09-14", "branch": "본부", "position": "조직부장", "requester": "우경원", "substitute": "서재춘", "workDetails": "제일타워공영 미팅", "companion": "김우선지부장님, 박승환조직부장님", "note": "" }
   ]
 }
