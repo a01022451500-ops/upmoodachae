@@ -110,6 +110,13 @@
     { "id": "rec-20260912-bonbu-kiy", "date": "2026-09-12", "branch": "본부", "position": "조합원", "requester": "김인영", "substitute": "엄동기", "workDetails": "박현순조합원 장례지원", "companion": "김태호조합원", "note": "토요일" },
     { "id": "rec-20260914-dongbu-jsi", "date": "2026-09-14", "branch": "동부지부", "position": "지부장", "requester": "정승일", "substitute": "백승진", "workDetails": "여주.양평현장 방문및미팅", "companion": "", "note": "" },
     { "id": "rec-20260914-bonbu-pss", "date": "2026-09-14", "branch": "본부", "position": "조직부장", "requester": "박승환", "substitute": "조진명", "workDetails": "제일타워공영 미팅", "companion": "남부지부장", "note": "" },
-    { "id": "rec-20260914-bonbu-wky", "date": "2026-09-14", "branch": "본부", "position": "조직부장", "requester": "우경원", "substitute": "서재춘", "workDetails": "제일타워공영 미팅", "companion": "김우선지부장님, 박승환조직부장님", "note": "" }
+    { "id": "rec-20260914-bonbu-wky", "date": "2026-09-14", "branch": "본부", "position": "조직부장", "requester": "우경원", "substitute": "서재춘", "workDetails": "제일타워공영 미팅", "companion": "김우선지부장님, 박승환조직부장님", "note": "" },
+    { "id": "rec-20260915-bonbu-hdh", "date": "2026-09-15", "branch": "본부", "position": "조직차장", "requester": "홍대훈", "substitute": "임대현", "workDetails": "소형활동", "companion": "본부장님", "note": "" },
+    { "id": "rec-20260915-bonbu-jyk", "date": "2026-09-15", "branch": "본부", "position": "조직차장", "requester": "정윤기", "substitute": "도형래", "workDetails": "평택 노안활동", "companion": "이준영 (용인지부)", "note": "" },
+    { "id": "rec-20260914-bonjo-phj", "date": "2026-09-14", "branch": "본조", "position": "사무국장", "requester": "박현진", "substitute": "서두석", "workDetails": "본조 사무국업무", "companion": "", "note": "" },
+    { "id": "rec-20260915-bonjo-phj", "date": "2026-09-15", "branch": "본조", "position": "사무국장", "requester": "박현진", "substitute": "서두석", "workDetails": "본조 사무국업무", "companion": "", "note": "" },
+    { "id": "rec-20260916-bonjo-phj", "date": "2026-09-16", "branch": "본조", "position": "사무국장", "requester": "박현진", "substitute": "서두석", "workDetails": "본조 사무국업무", "companion": "", "note": "" },
+    { "id": "rec-20260917-bonjo-phj", "date": "2026-09-17", "branch": "본조", "position": "사무국장", "requester": "박현진", "substitute": "서두석", "workDetails": "본조 사무국업무", "companion": "", "note": "" },
+    { "id": "rec-20260918-bonjo-phj", "date": "2026-09-18", "branch": "본조", "position": "사무국장", "requester": "박현진", "substitute": "서두석", "workDetails": "본조 사무국업무", "companion": "", "note": "" }
   ]
 }
