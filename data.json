@@ -117,6 +117,10 @@
     { "id": "rec-20260915-bonjo-phj", "date": "2026-09-15", "branch": "본조", "position": "사무국장", "requester": "박현진", "substitute": "서두석", "workDetails": "본조 사무국업무", "companion": "", "note": "" },
     { "id": "rec-20260916-bonjo-phj", "date": "2026-09-16", "branch": "본조", "position": "사무국장", "requester": "박현진", "substitute": "서두석", "workDetails": "본조 사무국업무", "companion": "", "note": "" },
     { "id": "rec-20260917-bonjo-phj", "date": "2026-09-17", "branch": "본조", "position": "사무국장", "requester": "박현진", "substitute": "서두석", "workDetails": "본조 사무국업무", "companion": "", "note": "" },
-    { "id": "rec-20260918-bonjo-phj", "date": "2026-09-18", "branch": "본조", "position": "사무국장", "requester": "박현진", "substitute": "서두석", "workDetails": "본조 사무국업무", "companion": "", "note": "" }
+    { "id": "rec-20260918-bonjo-phj", "date": "2026-09-18", "branch": "본조", "position": "사무국장", "requester": "박현진", "substitute": "서두석", "workDetails": "본조 사무국업무", "companion": "", "note": "" },
+    { "id": "rec-20260916-bukbu-cyh", "date": "2026-09-16", "branch": "본부", "position": "지부장", "requester": "최양호", "substitute": "서재춘", "workDetails": "금곡동 행정복지센타집회", "companion": "윤대식, 임장현", "note": "" },
+    { "id": "rec-20260916-bonbu-wky", "date": "2026-09-16", "branch": "본부", "position": "조직부장", "requester": "우경원", "substitute": "조진명", "workDetails": "노동부출석", "companion": "", "note": "" },
+    { "id": "rec-20260817-jungbu-ljb", "date": "2026-08-17", "branch": "중부지부", "position": "지부장", "requester": "임지병", "substitute": "박정환", "workDetails": "한백 양창선이사 면담,소형현장 방문", "companion": "이우성 (조직부장)", "note": "" },
+    { "id": "rec-20260818-jungbu-ljb", "date": "2026-08-18", "branch": "중부지부", "position": "지부장", "requester": "임지병", "substitute": "박정환", "workDetails": "고등동 개성건설,SM동아 사전집회", "companion": "강의석", "note": "" }
   ]
 }
