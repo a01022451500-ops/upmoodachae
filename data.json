@@ -108,7 +108,7 @@
     { "id": "rec-20260914-bukbu-cyh", "date": "2026-09-14", "branch": "본부", "position": "지부장", "requester": "최양호", "substitute": "이상건", "workDetails": "금곡동 소형현장(행정복지센타) 소장미팅", "companion": "윤대식", "note": "" },
     { "id": "rec-20260912-bonbu-kth", "date": "2026-09-12", "branch": "본부", "position": "조합원", "requester": "김태호", "substitute": "이상건", "workDetails": "박현순조합원 장례지원", "companion": "김인영조합원", "note": "토요일" },
     { "id": "rec-20260912-bonbu-kiy", "date": "2026-09-12", "branch": "본부", "position": "조합원", "requester": "김인영", "substitute": "엄동기", "workDetails": "박현순조합원 장례지원", "companion": "김태호조합원", "note": "토요일" },
-    { "id": "rec-20260914-dongbu-jsi", "date": "2026-09-14", "branch": "동부지부", "position": "지부장", "requester": "정승일", "substitute": "백승진", "workDetails": "여주.양평현장 방문및미팅", "companion": "", "note": "" },
+    { "id": "rec-20260914-dongbu-jsi", "date": "2026-09-14", "branch": "본부", "position": "지부장", "requester": "정승일", "substitute": "백승진", "workDetails": "여주.양평현장 방문및미팅", "companion": "", "note": "" },
     { "id": "rec-20260914-bonbu-pss", "date": "2026-09-14", "branch": "본부", "position": "조직부장", "requester": "박승환", "substitute": "조진명", "workDetails": "제일타워공영 미팅", "companion": "남부지부장", "note": "" },
     { "id": "rec-20260914-bonbu-wky", "date": "2026-09-14", "branch": "본부", "position": "조직부장", "requester": "우경원", "substitute": "서재춘", "workDetails": "제일타워공영 미팅", "companion": "김우선지부장님, 박승환조직부장님", "note": "" },
     { "id": "rec-20260915-bonbu-hdh", "date": "2026-09-15", "branch": "본부", "position": "조직차장", "requester": "홍대훈", "substitute": "임대현", "workDetails": "소형활동", "companion": "본부장님", "note": "" },
@@ -119,7 +119,7 @@
     { "id": "rec-20260918-bonjo-phj", "date": "2026-09-18", "branch": "본조", "position": "사무국장", "requester": "박현진", "substitute": "서두석", "workDetails": "본조 사무국업무", "companion": "", "note": "" },
     { "id": "rec-20260916-bukbu-cyh", "date": "2026-09-16", "branch": "본부", "position": "지부장", "requester": "최양호", "substitute": "서재춘", "workDetails": "금곡동 행정복지센타집회", "companion": "윤대식, 임장현", "note": "" },
     { "id": "rec-20260916-bonbu-wky", "date": "2026-09-16", "branch": "본부", "position": "조직차장", "requester": "우경원", "substitute": "조진명", "workDetails": "노동부출석", "companion": "", "note": "" },
-    { "id": "rec-20260817-jungbu-ljb", "date": "2026-08-17", "branch": "중부지부", "position": "지부장", "requester": "임지병", "substitute": "박정환", "workDetails": "한백 양창선이사 면담,소형현장 방문", "companion": "이우성 (조직부장)", "note": "" },
-    { "id": "rec-20260818-jungbu-ljb", "date": "2026-08-18", "branch": "중부지부", "position": "지부장", "requester": "임지병", "substitute": "박정환", "workDetails": "고등동 개성건설,SM동아 사전집회", "companion": "강의석", "note": "" }
+    { "id": "rec-20260817-jungbu-ljb", "date": "2026-08-17", "branch": "본부", "position": "지부장", "requester": "임지병", "substitute": "박정환", "workDetails": "한백 양창선이사 면담,소형현장 방문", "companion": "이우성 (조직부장)", "note": "" },
+    { "id": "rec-20260818-jungbu-ljb", "date": "2026-08-18", "branch": "본부", "position": "지부장", "requester": "임지병", "substitute": "박정환", "workDetails": "고등동 개성건설,SM동아 사전집회", "companion": "강의석", "note": "" }
   ]
 }
